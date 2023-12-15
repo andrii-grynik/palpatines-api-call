@@ -11,7 +11,7 @@ run node index.js
 ## Issues I ran into:
 
 ran into some issues with reaching api with proper format, but got that settled. 
-Swapi data gets pulled with .co and at some poing it was changed to .dev, so I worked around it 
+Swapi data gets pulled with .co and at some point it was changed to .dev, so I worked around it.
 
 ## Future improvements: 
 
