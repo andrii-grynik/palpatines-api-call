@@ -20,3 +20,5 @@ Separating and compartmentalizing for the index.js in order to make it easier to
 Removal of global variables. 
 
 My data filtering is a bit brute and I would start with improving and optimizing it.
+
+Started on migrating to TS in src, for future proofing.
