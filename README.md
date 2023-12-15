@@ -8,12 +8,12 @@ Please clone the repo and run nmp i in proper root ion order to install dependen
 In order to start:
 run node index.js 
 
-##Issues I ran into:
+## Issues I ran into:
 
 ran into some issues with reaching api with proper format, but got that settled. 
 Swapi data gets pulled with .co and at some poing it was changed to .dev, so I worked around it 
 
-##Future improvements: 
+## Future improvements: 
 
 Separating and compartmentalizing for the index.js in order to make it easier to manage and have separate file for easy functionality changes. 
 
