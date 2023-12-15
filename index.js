@@ -15,18 +15,15 @@ async function decryptAndProcessData() {
     crlfDelay: Infinity,
   });
 
+  let counter = 0;
+  const MAX_CALLS = 200;
+
   for await (const line of rl) {
     try {
-      console.log("Data to API", line.trim());
-      const response = await axios.post(
-        URL,
-        line.trim(),
-        // { parameters: "none" },
-        {
-          headers: { "x-api-key": API_KEY, "Content-Type": "application/json" },
-        }
-      );
-      console.log("API response:", response.data);
+      const response = await axios.post(URL, line.trim(), {
+        headers: { "x-api-key": API_KEY, "Content-Type": "application/json" },
+      });
+
       const decryptedData = JSON.parse(response.data);
       if (!uniqueCitizens.has(decryptedData.name)) {
         uniqueCitizens.set(decryptedData.name, decryptedData.homeworld);
@@ -34,7 +31,11 @@ async function decryptAndProcessData() {
     } catch (error) {
       console.error("Error in decryption:", error);
     }
-    break;
+
+    counter++;
+    if (counter >= MAX_CALLS) {
+      break;
+    }
   }
 }
 
