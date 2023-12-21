@@ -3,7 +3,7 @@ Lets make some calls.
 
 Node version used: v21.2.0
 
-Please clone the repo and run nmp i in proper root ion order to install dependencies. 
+Please clone the repo and run nmp i in proper root in order to install dependencies. 
 
 In order to start:
 run node index.js 
